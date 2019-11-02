@@ -1,0 +1,190 @@
+.services
+	padding:  80px 0 50px
+	+r(992)
+		padding: 60px 0
+	+r(575)
+		padding: 40px 0
+	&__wrapper
+		display: flex
+		justify-content: space-between
+		border-top: 1px solid $mercury
+		padding: 50px 70px 0
+		flex-wrap: wrap
+		+r(1199)
+			padding: 50px 15px 0
+		+r(992)
+			padding: 40px 15px 0
+		+r(575)
+			padding: 30px 0 0
+	&__warning
+		margin: 40px 0 50px
+		font-size: 18px
+		color: $codGray
+		font-weight: 500
+		padding-left: 70px
+		position: relative
+		+r(992)
+			margin: 35px 0 45px
+		+r(767)
+			margin: 0 0 35px
+		+r(575)
+			margin: 0 0 25px
+			padding-left: 40px
+
+		&::before
+			content: ''
+			width: 30px
+			height: 30px
+			position: absolute
+			left: 20px
+			top: 50%
+			transform: translateY(-50%)
+			background: url('../img/warning.svg') center no-repeat
+			background-size: contain
+			+r(575)
+				left: 0
+	&__info
+		width: calc( 50% - 40px )
+		margin-bottom: 30px
+		+r(991)
+			width: 100%
+		&:last-of-type
+			margin-bottom: 0
+		p
+			margin: 0 0 30px
+			line-height: 1.667em
+			color: $mineShaft
+			&:last-of-type
+				margin-bottom: 0
+			& + ul
+				margin-top: 30px
+		ul
+			li
+				padding-left: 50px
+				line-height: 2em
+				position: relative
+				&::before
+					content: ''
+					width: 6px
+					height: 6px
+					background-color: $vidaLoca
+					position: absolute
+					left: 29px
+					top: 14px
+					border-radius: 50%
+.services
+	&-swiper
+		&__wrapper
+			display: flex
+			justify-content: space-between
+			align-items: center
+			flex-wrap: wrap
+			&--warning
+				+r(767)
+					flex-direction: column-reverse
+		&__button-next,
+		&__button-prev
+			position: initial
+			cursor: pointer
+			border: none
+			transition: all .3s ease
+			background: transparent
+			padding: 0
+			display: block
+			margin-left: 20px
+			.icon
+				display: block
+				fill: $codGray
+				font-size: 36px
+				transition: all .1s ease
+				+r(767)
+					font-size: 32px
+				+r(575)
+					font-size: 28px
+			&:hover
+				.icon
+					fill: $vidaLoca
+					filter: drop-shadow( 0 4px 4px rgba(0, 0, 0, 0.25) )
+		&__button-prev
+			transform: rotate(180deg)
+			&:hover
+				.icon
+					filter: drop-shadow( 0 -4px 4px  rgba(0, 0, 0, 0.25) )
+		&__nav
+			display: flex
+			margin-bottom: 60px
+			+r(1199)
+				margin: 0 0 55px
+			+r(992)
+				margin: 0 0 45px
+			+r(767)
+				margin: 0 0 35px
+			+r(575)
+				margin: 0 0 25px
+			.swiper-button-disabled
+				opacity: .5
+				cursor: default
+				&:hover
+					.icon
+						fill: $codGray
+						filter: drop-shadow( 0 0 0  rgba(0, 0, 0, 0) )
+		.swiper-slide
+			display: flex
+			flex-direction: column
+			align-items: center
+			text-align: center
+			padding: 60px 25px
+			box-sizing: border-box
+			background-color: $alabaster
+			border: 1px solid $mercury
+			border-radius: 12px
+			+r(1199)
+				padding: 50px 25px
+			+r(991)
+				padding: 45px 25px
+			+r(767)
+				padding: 35px 20px
+			+r(575)
+				padding: 30px 20px
+			h3
+				margin: 0
+				min-height: 50px
+				font-size: 20px
+				color: $codGray
+				line-height: 1.300em
+				font-weight: 600
+				span
+					display: block
+					font-size: 18px
+					font-weight: 400
+					color: $stormDust
+
+		&__img-wrapper
+			min-height: 100px
+			display: flex
+			align-items: center
+			margin-bottom: 50px
+			+r(767)
+				margin-bottom: 35px
+			+r(575)
+				margin-bottom: 25px
+		&__pagination
+			display: flex
+			justify-content: space-between
+			+r(767)
+				margin: 25px 0
+			.swiper-pagination-bullet
+				display: block
+				width: 10px
+				height: 10px
+				background-color: $silver
+				margin: 0 10px
+				opacity: 1
+				&:last-of-type
+					margin-right: 0
+				&:hover, &:focus
+					outline: none
+				&-active
+					background-color: $vidaLoca
+
+

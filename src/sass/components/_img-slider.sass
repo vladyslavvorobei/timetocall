@@ -1,0 +1,126 @@
+.img-slider
+	padding: 100px 0 80px
+	+r(992)
+		padding: 60px 0
+	+r(575)
+		padding: 40px 0
+	&__button-next,
+	&__button-prev
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		width: 80px
+		height: 80px
+		z-index: 100
+		padding: 0
+		border: none
+		background-color: transparent
+		border-radius: 50%
+		transition: all .3s ease
+		+r(767)
+			width: 60px
+			height: 60px
+		+r(575)
+			display: none
+		&::before
+			content: ''
+			width: 80px
+			height: 80px
+			background-color: rgba( 0, 0, 0, .15 )
+			position: absolute
+			left: 50%
+			top: 50%
+			border-radius: 50%
+			transform: translate(-50% , -50%)
+			transition: all .3s ease
+			+r(767)
+				width: 60px
+				height: 60px
+		&::after
+			content: ''
+			width: 70px
+			height: 70px
+			background: $white url('../img/img-slider-arrow.svg') center no-repeat
+			background-size: 12px 20px
+			position: absolute
+			left: 50%
+			top: 50%
+			border-radius: 50%
+			transform: translate(-50% , -50%)
+			transition: all .3s ease
+			+r(767)
+				width: 50px
+				height: 50px
+		&:hover, &:focus
+			&::before
+				background-color: rgba( 0, 0, 0, .5 )
+	.swiper-button-disabled
+		cursor: default
+		&::after
+			opacity: .5
+		&:hover, &:focus
+			&::before
+				background-color: rgba( 0, 0, 0, .15 )
+	&__button-prev
+		left: 20vw
+		+r(1199)
+			left: 10vw
+	&__button-next
+		right: 20vw
+		+r(1199)
+			right: 10vw
+		&::after
+			transform: rotate(180deg) translate(50% , 50%)
+	&__pagination
+		display: flex
+		justify-content: center
+		padding-top: 60px
+		z-index: 100
+		bottom: 0
+		+r(992)
+			padding-top: 50px
+		+r(767)
+			padding-top: 40px
+		+r(575)
+			padding-top: 30px
+		.swiper-pagination-bullet
+			display: block
+			width: 10px
+			height: 10px
+			background-color: $silver
+			margin: 0 10px
+			opacity: 1
+			&:last-of-type
+				margin-right: 0
+			&:hover, &:focus
+				outline: none
+			&-active
+				background-color: $vidaLoca
+	.swiper
+		&-container
+			height: 600px
+			+r(1199)
+				height: 500px
+			+r(992)
+				height: 400px
+			+r(767)
+				height: 300px
+
+		&-slide
+			height: 300px
+			+r(1199)
+				height: 250px
+			+r(992)
+				height: 200px
+			+r(767)
+				height: 300px
+			a
+				display: block
+				width: 100%
+				height: 100%
+				img
+					display: block
+					width: 100%
+					height: 100%
+					object-fit: cover
+

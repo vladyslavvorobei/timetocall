@@ -1,0 +1,40 @@
+.footer
+	background-color: #353434
+	padding: 50px 0
+	+r(575)
+		padding: 40px 0
+	&__inner-wrapper
+		display: flex
+		justify-content: space-between
+		+r(991)
+			flex-direction: column-reverse
+			align-items: center
+	&__logo
+		display: block
+
+		img
+			display: block
+	&__social
+		display: flex
+		+r(991)
+			margin-bottom: 15px
+		li
+			margin: 0 15px
+			a
+				display: block
+			img
+				display: block
+				width: 30px
+				height: 30px
+				object-fit: contain
+	&__callback
+		margin-left: 0
+		+r(1199)
+			width: auto
+		+r(991)
+			align-items: center
+			margin-bottom: 15px
+		.header__tel
+			color: $white
+			&:hover
+				color: $vidaLoca

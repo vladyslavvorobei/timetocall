@@ -1,0 +1,41 @@
+.popular
+	padding: 100px 0
+	+r(992)
+		padding: 60px 0
+	+r(575)
+		padding: 40px 0
+	&__inner-wrapper
+		display: grid
+		grid-template-columns: repeat(4, 1fr)
+		grid-gap: 60px 100px
+		+r(1199)
+			grid-gap: 50px
+		+r(992)
+			grid-gap: 30px
+		+r(767)
+			grid-template-columns: repeat(3, 1fr)
+		+r(575)
+			grid-template-columns: repeat(2, 1fr)
+	&__item
+		text-align: center
+		img
+			display: block
+			width: 100%
+			max-width: 200px
+			height: auto
+			margin: 0 auto
+		h3
+			margin: 0 0 30px
+			font-weight: 500
+			font-size: 20px
+			line-height: 1.200em
+			color: $codGray
+			min-height: 50px
+			+r(992)
+				font-size: 18px
+				margin-bottom: 20px
+				min-height: 43px
+		p
+			margin: 0
+			font-size: 20px
+			color: $stormDust

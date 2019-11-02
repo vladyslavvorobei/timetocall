@@ -1,0 +1,66 @@
+.faq
+	padding: 80px 0 100px
+	background-color: $alabaster
+	+r(992)
+		padding: 60px 0
+	+r(575)
+		padding: 40px 0
+	&__list
+	&__item
+		background-color: $white
+		border: 1px solid $mercury
+		border-radius: 4px
+		padding: 20px 70px 0 30px
+		margin-bottom: 10px
+		+r(575)
+			padding: 20px 45px 0 20px
+	&__question
+		margin-bottom: 20px
+		font-weight: 500
+		color: $codGray
+		font-size: 22px
+		line-height: 1.364em
+		position: relative
+		cursor: pointer
+		+r(768)
+			font-size: 20px
+		+r(575)
+			font-size: 18px
+		&::before
+			content: 'В:'
+			color: $vidaLoca
+		&::after
+			content: ''
+			width: 30px
+			height: 30px
+			position: absolute
+			right: -50px
+			top: 50%
+			transform: translateY(-50%) rotate(90deg)
+			background: url('../img/faq-arrow.svg') center no-repeat
+			background-size: contain
+			transition: all .3s ease
+			+r(575)
+				width: 25px
+				height: 25px
+				right: -30px
+		&--active
+			&::after
+				transform: translateY(-50%) rotate(0deg)
+	&__answer
+		display: none
+		margin-bottom: 30px
+		color: $stormDust
+		line-height: 1.556em
+		padding-right: 100px
+		+r(1199)
+			padding-right: 50px
+		+r(991)
+			padding-right: 0
+		+r(575)
+			font-size: 16px
+		&::before
+			content: 'О:'
+			color: $vidaLoca
+		&--active
+			display: block

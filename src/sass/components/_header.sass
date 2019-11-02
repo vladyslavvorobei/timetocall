@@ -1,0 +1,183 @@
+.header
+	position: fixed
+	left: 0
+	top: 0
+	right: 0
+	padding: 40px 0
+	background-color: transparent
+	z-index: 1000
+	transition: all .3s ease
+	box-sizing: border-box
+	+r(1199)
+		padding: 20px 0
+		min-height: 80px
+		.container
+			position: initial
+	&--scroll, &--active
+		padding: 20px 0
+		box-shadow: 0 0 5px 0 rgba(0,0,0,.1)
+		background-color: $white
+	&__inner-wrapper
+		display: flex
+		align-items: center
+		justify-content: space-between
+		+r(1199)
+			flex-direction: column
+	&__burger
+		display: flex
+		align-items: center
+		justify-content: space-between
+		+r(1199)
+			width: 100%
+		&-btn
+			display: none
+			z-index: 1100
+			width: 40px
+			height: 40px
+			background-color: rgba($vidaLoca, .8)
+			border: none
+			border-radius: 5px
+			padding: 0
+			position: relative
+			+r(1199)
+				display: block
+			&--active
+				.header__burger-bar
+					background-color: transparent
+					&::before
+						top: 0
+						transform: rotate(45deg)
+					&::after
+						top: 0
+						transform: rotate(-45deg)
+		&-bar
+			width: 30px
+			height: 3px
+			position: absolute
+			background-color: $white
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%)
+			transition: all .3s ease
+			&::before, &::after
+				content: ''
+				width: 30px
+				height: 3px
+				left: 0
+				position: absolute
+				background-color: $white
+				transition: all .3s ease
+			&::before
+				top: - 8px
+			&::after
+				top: 8px
+
+
+	&__logo
+		display: block
+		max-width: 256px
+		+r(575)
+			max-width: 206px
+		img
+			display: block
+			width: 100%
+			height: auto
+	&__menu
+		display: flex
+		align-items: center
+		+r(1199)
+			position: absolute
+			right: 0
+			top: 81px
+			bottom: 0
+			width: auto
+			max-width: 320px
+			height: calc( 100vh - 81px )
+			overflow: auto
+			transform: translateX(100vw)
+			transition: all .3s ease
+			background-color: $white
+			flex-direction: column
+			justify-content: flex-start
+			padding: 30px 15px 50px 25px
+			box-sizing: border-box
+		&--active
+			+r(1199)
+				transform: translateX(0)
+				box-shadow: 0 5px 5px 0 rgba(0,0,0,.1)
+	&__nav
+		+r(1199)
+			width: 100%
+			text-align: right
+		ul
+			display: flex
+			+r(1199)
+				display: block
+				width: 100%
+				margin-bottom: 30px
+		li
+			display: block
+			overflow: hidden
+			margin: 0 15px
+			flex-shrink: 0
+			+r(1199)
+				margin: 0 0 15px
+				&:last-of-type
+					margin-bottom: 0
+		a
+			display: block
+			position: relative
+			transition: all .3s ease
+			font-size: 16px
+			font-weight: 500
+			line-height: 1.2em
+			color: $stormDust
+			&::before
+				content: attr(data-attr)
+				position: absolute
+				top: -20px
+				color: $vidaLoca
+				left: 0
+				+r(1199)
+					content: none
+			&:hover, &:focus
+				transform: translateY(20px)
+				outline: none
+				+r(1199)
+					transform: translateY(0)
+					color: $vidaLoca
+	&__link
+		&--hidden
+			display: none!important
+			+r(1199)
+				display: block!important
+	&__callback
+		display: flex
+		flex-direction: column
+		margin-left: 115px
+		align-items: flex-end
+		+r(1199)
+			margin-left: 0
+			width: 100%
+		a
+			display: block
+			line-height: 1.2em
+			transition: all .3s ease
+	&__tel
+		font-size:  24px
+		color: $codGray
+		font-weight: 500
+		&:hover, &:focus
+			color: $vidaLoca
+	&__modal
+		font-size: 14px
+		font-family: $bodyFont
+		color: $vidaLoca
+		font-weight: 600
+		text-transform: uppercase
+		border: none
+		border-bottom: 1px solid $vidaLoca
+		padding: 0
+		background-color: transparent
+		&:hover, &:focus
+			border-bottom:  1px solid transparent

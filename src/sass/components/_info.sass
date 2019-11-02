@@ -1,0 +1,59 @@
+.info
+	padding: 200px 0
+	background: center no-repeat
+	background-size: cover
+	+r(1199)
+		padding: 150px 0 125px
+	+r(992)
+		padding: 80px 0 55px
+	+r(767)
+		padding: 60px 0 35px
+	+r(575)
+		padding: 40px 0
+	&__inner-wrapper
+		display: flex
+		justify-content: space-between
+		align-items: center
+		flex-wrap: wrap
+	&__item
+		width: 270px
+		flex-shrink: 0
+		text-align: center
+		+r(1199)
+			width: 50%
+			margin-bottom: 25px
+		+r(575)
+			width: 100%
+			&:last-of-type
+				margin-bottom: 0
+		h3
+			font-size: 64px
+			color: $vidaLoca
+			line-height:  1em
+			margin: 0 0 20px
+			+r(992)
+				font-size: 54px
+			+r(768)
+				font-size: 42px
+			+r(767)
+				font-size: 34px
+				margin-bottom: 10px
+			span
+				font-size: 30px
+				line-height: 1em
+				+r(992)
+					font-size: 24px
+				+r(575)
+					font-size: 20px
+
+		p
+			font-size: 22px
+			color: $white
+			font-weight: 600
+			margin: 0
+			+r(992)
+				font-size: 20px
+			+r(767)
+				font-size: 18px
+			+r(575)
+				font-size: 16px

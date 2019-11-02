@@ -1,0 +1,142 @@
+.button
+	display: inline-block
+	font-family: $bodyFont
+	border: none
+	background: linear-gradient(180deg, #7BD223 0%, #61A41E 100%)
+	box-shadow: 0 10px 50px rgba(97, 164, 30, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.5), inset 0 -1px 0 rgba(0, 0, 0, 0.1)
+	border-radius: 45px
+	padding: 35px 90px
+	font-size: 20px
+	line-height: 1em
+	font-weight: 700
+	text-transform: uppercase
+	color: $white
+	transition: all .3s ease
+	box-sizing: border-box
+	+r(1199)
+		padding: 30px 75px
+	+r(991)
+		padding: 25px 65px
+	+r(767)
+		padding: 20px 55px
+	+r(575)
+		padding: 15px 45px
+		font-size: 18px
+	&:hover, &:focus
+		box-shadow: 0 15px 50px rgba(97, 164, 30, 0.5), inset 0 2px 0 rgba(255, 255, 255, 0.1), inset 0 -2px 0 rgba(0, 0, 0, 0.3)
+		transform: translateY(-1px)
+	&:active
+		transform: translateY(1px)
+		box-shadow: 0 0 5px 0 rgba(97, 164, 30, 1), inset 0 2px 0 rgba(255, 255, 255, 0.1), inset 0 -4px 0 rgba(0, 0, 0, 0.3)
+	&--modal
+		padding: 20px 50px
+	&--contact
+		min-width: 370px
+		padding: 23px 50px 23px 70px
+		border-radius: 84px
+		text-transform: none
+		font-size: 24px
+		box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.1), inset 0 -2px 0 rgba(0, 0, 0, 0.3)
+		position: relative
+		+r(575)
+			min-width: auto
+			font-size: 18px
+			padding: 20px 40px 20px 55px
+		&::before
+			content: ''
+			width: 40px
+			height: 40px
+			background-color: $white
+			position: absolute
+			left: 20px
+			top: 50%
+			transform: translateY(-50%)
+			border-radius: 50%
+			transition: all .6s ease
+			+r(575)
+				width: 30px
+				height: 30px
+				left: 15px
+		&:hover, &:focus
+			box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.1), inset 0 -2px 0 rgba(0, 0, 0, 0.3)
+			&::before
+				transform: translateY(-50%) rotate(360deg)
+		&:active
+			box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.1), inset 0 -4px 0 rgba(0, 0, 0, 0.3)
+	&--vk
+		&::before
+			background: url('../img/vk.svg') center no-repeat
+			background-size: contain
+	&--viber
+		&::before
+			background: url('../img/viber.svg') center no-repeat
+			background-size: contain
+	&--watsapp
+		&::before
+			background: url('../img/watsapp.svg') center no-repeat
+			background-size: contain
+	&--instagram
+		&::before
+			background: url('../img/instagram.svg') center no-repeat
+			background-size: contain
+	&--call
+		background: $white
+		color: $codGray
+		&::before
+			width: 30px
+			height: 30px
+			left: 25px
+			top: 50%
+			transform: translateY(-50%)
+			background: url('../img/call-icon.svg') center no-repeat
+			background-size: contain
+			+r(575)
+				left: 15px
+.title
+	text-align: center
+	font-size: 48px
+	color: $codGray
+	font-weight: 400
+	line-height: 1.25em
+	margin: 0 0 60px
+	+r(1199)
+		font-size: 42px
+		margin: 0 0 55px
+	+r(992)
+		font-size: 38px
+		margin: 0 0 45px
+	+r(767)
+		font-size: 32px
+		margin: 0 0 35px
+	+r(575)
+		font-size: 28px
+		margin: 0 0 25px
+	&--left
+		text-align: left
+	&--white
+		color: $white
+	& + .subtitle
+		margin-top: -40px
+		+r(992)
+			margin-top: -30px
+		+r(767)
+			margin-top: - 20px
+		+r(575)
+			margin-top: 0
+	&--modal
+		margin: 0 0 15px
+.subtitle
+	text-align: center
+	font-weight: normal
+	font-size: 18px
+	margin: 0 auto 50px
+	max-width: 675px
+	color: $stormDust
+	line-height: 1.3em
+	+r(992)
+		margin: 0 auto 45px
+	+r(767)
+		margin: 0 auto 35px
+	+r(575)
+		font-size: 16px
+		margin: 0 auto 25px

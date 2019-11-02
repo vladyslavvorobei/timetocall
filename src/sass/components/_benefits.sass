@@ -1,0 +1,41 @@
+.benefits
+	background-color: $alabaster
+	padding: 80px 0 100px
+	+r(992)
+		padding: 60px 0
+	+r(575)
+		padding: 40px 0
+	&__inner-wrapper
+		display: grid
+		grid-template-columns: repeat(5, 1fr)
+		grid-gap: 15px
+		+r(1199)
+			grid-template-columns: repeat(3, 1fr)
+		+r(768)
+			grid-template-columns: repeat(2, 1fr)
+		+r(575)
+			grid-template-columns: 1fr
+	&__item
+		background-color: $white
+		border: 1px solid $mercury
+		border-radius: 8px
+		display: flex
+		align-items: center
+		flex-direction: column
+		text-align: center
+		padding: 42px 18px 21px
+		flex-shrink: 0
+		box-sizing: border-box
+		+r(575)
+			padding: 20px
+		img
+			display: block
+			margin-bottom: 30px
+			+r(575)
+				margin-bottom: 20px
+		h3
+			font-weight: 500
+			line-height: 1.444em
+			color: $codGray
+			margin:  0
+			font-size: 18px
