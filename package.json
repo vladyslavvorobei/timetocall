@@ -75,7 +75,7 @@
     "@fancyapps/fancybox": "^3.5.7",
     "jquery-mask-plugin": "^1.14.16",
     "jquery-popup-overlay": "^2.1.1",
-    "jquery-validation": "^1.19.1",
+    "jquery-validation": "^1.19.3",
     "normalize-scss": "^7.0.1",
     "svg4everybody": "^2.1.9",
     "svgxuse": "^1.2.6",
